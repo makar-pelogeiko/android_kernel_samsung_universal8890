@@ -91,51 +91,51 @@ config CPU_FREQ_DEFAULT_GOV_ONDEMAND
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the performance governor.
 
-config CPU_FREQ_DEFAULT_GOV_SPSA2
-	bool "spsa2"
-	select CPU_FREQ_GOV_SPSA2
+config CPU_FREQ_DEFAULT_GOV_SPSA2_1_SOLID
+	bool "spsa2_1_solid"
+	select CPU_FREQ_GOV_SPSA2_1_SOLID
 	select CPU_FREQ_GOV_PERFORMANCE
 	help
-	  Use the CPUFreq governor 'spsa2' as default. This allows
+	  Use the CPUFreq governor 'spsa2_1_solid' as default. This allows
 	  you to get a full dynamic frequency capable system by simply
 	  loading your cpufreq low-level hardware driver.
-	  Be aware that not all cpufreq drivers support the spsa2
+	  Be aware that not all cpufreq drivers support the spsa2_1_solid
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the performance governor.
 
-config CPU_FREQ_DEFAULT_GOV_SPSA2LONG
-	bool "spsa2long"
-	select CPU_FREQ_GOV_SPSA2LONG
+config CPU_FREQ_DEFAULT_GOV_SPSA2_2
+	bool "spsa2_2"
+	select CPU_FREQ_GOV_SPSA2_2
 	select CPU_FREQ_GOV_PERFORMANCE
 	help
-	  Use the CPUFreq governor 'spsa2' as default. This allows
+	  Use the CPUFreq governor 'spsa2_2' as default. This allows
 	  you to get a full dynamic frequency capable system by simply
 	  loading your cpufreq low-level hardware driver.
-	  Be aware that not all cpufreq drivers support the spsa2
+	  Be aware that not all cpufreq drivers support the spsa2_2
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the performance governor.
 
-config CPU_FREQ_DEFAULT_GOV_SPSA2TURBO
-	bool "spsa2long"
-	select CPU_FREQ_GOV_SPSA2TURBO
+config CPU_FREQ_DEFAULT_GOV_SPSA2_3
+	bool "spsa2_3"
+	select CPU_FREQ_GOV_SPSA2_3
 	select CPU_FREQ_GOV_PERFORMANCE
 	help
-	  Use the CPUFreq governor 'spsa2' as default. This allows
+	  Use the CPUFreq governor 'spsa2_3' as default. This allows
 	  you to get a full dynamic frequency capable system by simply
 	  loading your cpufreq low-level hardware driver.
-	  Be aware that not all cpufreq drivers support the spsa2
+	  Be aware that not all cpufreq drivers support the spsa2_3
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the performance governor.
 
-config CPU_FREQ_DEFAULT_GOV_SPSA2DINA
-	bool "spsa2long"
-	select CPU_FREQ_GOV_SPSA2DINA
+config CPU_FREQ_DEFAULT_GOV_SPSA2_1_HIGHFREQ
+	bool "spsa2_1_highfreq"
+	select CPU_FREQ_GOV_SPSA2_1_HIGHFREQ
 	select CPU_FREQ_GOV_PERFORMANCE
 	help
-	  Use the CPUFreq governor 'spsa2' as default. This allows
+	  Use the CPUFreq governor 'spsa2_1_highfreq' as default. This allows
 	  you to get a full dynamic frequency capable system by simply
 	  loading your cpufreq low-level hardware driver.
-	  Be aware that not all cpufreq drivers support the spsa2
+	  Be aware that not all cpufreq drivers support the spsa2_1_highfreq
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the performance governor.
 
@@ -224,11 +224,11 @@ config CPU_FREQ_GOV_ONDEMAND
 
 	  If in doubt, say N.
 
-config CPU_FREQ_GOV_SPSA2
-	tristate "'spsa2' cpufreq policy governor"
+config CPU_FREQ_GOV_SPSA2_1_SOLID
+	tristate "'spsa2_1_solid' cpufreq policy governor"
 	select CPU_FREQ_GOV_COMMON
 	help
-	  'spsa2' - This driver adds a dynamic cpufreq policy governor.
+	  'spsa2_1_solid' - This driver adds a dynamic cpufreq policy governor.
 	  The governor does a periodic polling and 
 	  changes frequency based on the CPU utilization.
 	  The support for this governor depends on CPU capability to
@@ -236,17 +236,17 @@ config CPU_FREQ_GOV_SPSA2
 	  transitions). 
 
 	  To compile this driver as a module, choose M here: the
-	  module will be called cpufreq_spsa2.
+	  module will be called cpufreq_spsa2_1_solid.
 
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N.
 
-config CPU_FREQ_GOV_SPSA2LONG
-	tristate "'spsa2' cpufreq policy governor"
+config CPU_FREQ_GOV_SPSA2_2
+	tristate "'spsa2_2' cpufreq policy governor"
 	select CPU_FREQ_GOV_COMMON
 	help
-	  'spsa2' - This driver adds a dynamic cpufreq policy governor.
+	  'spsa2_2' - This driver adds a dynamic cpufreq policy governor.
 	  The governor does a periodic polling and 
 	  changes frequency based on the CPU utilization.
 	  The support for this governor depends on CPU capability to
@@ -254,17 +254,17 @@ config CPU_FREQ_GOV_SPSA2LONG
 	  transitions). 
 
 	  To compile this driver as a module, choose M here: the
-	  module will be called cpufreq_spsa2.
+	  module will be called cpufreq_spsa2_2.
 
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N.
 
-config CPU_FREQ_GOV_SPSA2TURBO
-	tristate "'spsa2' cpufreq policy governor"
+config CPU_FREQ_GOV_SPSA2_3
+	tristate "'spsa2_3' cpufreq policy governor"
 	select CPU_FREQ_GOV_COMMON
 	help
-	  'spsa2' - This driver adds a dynamic cpufreq policy governor.
+	  'spsa2_3' - This driver adds a dynamic cpufreq policy governor.
 	  The governor does a periodic polling and 
 	  changes frequency based on the CPU utilization.
 	  The support for this governor depends on CPU capability to
@@ -272,17 +272,17 @@ config CPU_FREQ_GOV_SPSA2TURBO
 	  transitions). 
 
 	  To compile this driver as a module, choose M here: the
-	  module will be called cpufreq_spsa2.
+	  module will be called cpufreq_spsa2_3.
 
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N.
 
-config CPU_FREQ_GOV_SPSA2DINA
-	tristate "'spsa2' cpufreq policy governor"
+config CPU_FREQ_GOV_SPSA2_1_HIGHFREQ
+	tristate "'spsa2_1_highfreq' cpufreq policy governor"
 	select CPU_FREQ_GOV_COMMON
 	help
-	  'spsa2' - This driver adds a dynamic cpufreq policy governor.
+	  'spsa2_1_highfreq' - This driver adds a dynamic cpufreq policy governor.
 	  The governor does a periodic polling and 
 	  changes frequency based on the CPU utilization.
 	  The support for this governor depends on CPU capability to
@@ -290,7 +290,7 @@ config CPU_FREQ_GOV_SPSA2DINA
 	  transitions). 
 
 	  To compile this driver as a module, choose M here: the
-	  module will be called cpufreq_spsa2.
+	  module will be called cpufreq_spsa2_1_highfreq.
 
 	  For details, take a look at linux/Documentation/cpu-freq.
 

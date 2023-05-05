@@ -487,18 +487,18 @@ extern struct cpufreq_governor cpufreq_gov_userspace;
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND)
 extern struct cpufreq_governor cpufreq_gov_ondemand;
 #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_ondemand)
-#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2)
-extern struct cpufreq_governor cpufreq_gov_spsa2;
-#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2)
-#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2LONG)
-extern struct cpufreq_governor cpufreq_gov_spsa2long;
-#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2long)
-#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2TURBO)
-extern struct cpufreq_governor cpufreq_gov_spsa2turbo;
-#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2turbo)
-#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2DINA)
-extern struct cpufreq_governor cpufreq_gov_spsa2dina;
-#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2dina)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2_1_SOLID)
+extern struct cpufreq_governor cpufreq_gov_spsa2_1_solid;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2_1_solid)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2_2)
+extern struct cpufreq_governor cpufreq_gov_spsa2_2;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2_2)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2_3)
+extern struct cpufreq_governor cpufreq_gov_spsa2_3;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2_3)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SPSA2_1_HIGHFREQ)
+extern struct cpufreq_governor cpufreq_gov_spsa2_1_highfreq;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_spsa2_1_highfreq)
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_CONSERVATIVE)
 extern struct cpufreq_governor cpufreq_gov_conservative;
 #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_conservative)
